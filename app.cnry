@@ -1,0 +1,32 @@
+# app.cnry
+initialConary
+
+write ===_CONARY_SYSTEM_BOOT_===
+
+# Capture custom user feedback strings
+input_var username Enter_your_dev_name:_
+setup_var score 100
+
+# Alter tracking parameters
+math_var score * 2
+write Calculated_Developer_Score:
+write score
+
+# Interact with database configurations using custom engine variables
+write Syncing_to_Local_SQL_Database...
+db_connect network.db
+db_execute CREATE TABLE IF NOT EXISTS developers (name TEXT, points INTEGER);
+db_execute INSERT INTO players VALUES ('$username', $score);
+
+write Verifying_Saved_Data_Assets:
+db_execute SELECT * FROM players;
+db_fetch
+db_close
+
+# Loop structure execution
+write Launching_Sequence_Timer:
+loop_var 3
+    write Operational_Pulse_Check_OK...
+end_block
+
+write Execution_Completed_Successfully.
