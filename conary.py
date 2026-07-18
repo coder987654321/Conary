@@ -207,3 +207,12 @@ def run_conary(filename):
 if __name__ == "__main__":
     if len(sys.argv) < 2: print("Usage: conary <filename.cnry>")
     else: run_conary(sys.argv[1])
+
+def main_cli():
+    if len(sys.argv) < 2:
+        print("Usage: conary <filename.cnry>")
+    else:
+        run_conary(sys.argv[1])
+
+if __name__ == "__main__":
+    main_cli()
