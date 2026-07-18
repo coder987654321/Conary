@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Conary",
+    "scopeName": "source.cnry",
+    "patterns": [
+        {
+            "name": "comment.line.number-sign.cnry",
+            "match": "#.*$"
+        },
+        {
+            "name": "string.quoted.double.cnry",
+            "begin": "\"",
+            "end": "\""
+        },
+        {
+            "name": "keyword.control.conary",
+            "match": "\\b(initialUI|if|meets condition|do|otherwise if|otherwise|end_block)\\b"
+        },
+        {
+            "name": "support.function.conary",
+            "match": "\\b(setup_var|write|get_random|math_var|ui_init|ui_bg_color|ui_move|ui_draw_square|ui_write)\\b"
+        },
+        {
+            "name": "constant.numeric.cnry",
+            "match": "\\b[0-9]+\\b"
+        }
+    ]
+}
