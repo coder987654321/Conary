@@ -1,0 +1,7 @@
+conary.py
+setup.py
+conary.egg-info/PKG-INFO
+conary.egg-info/SOURCES.txt
+conary.egg-info/dependency_links.txt
+conary.egg-info/entry_points.txt
+conary.egg-info/top_level.txt
